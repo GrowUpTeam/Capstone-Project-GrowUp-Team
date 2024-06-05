@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">AnimalPedia</string>
+    <string name="tagline">Menjelajah Hewan Dengan Gembira</string>
+    <string name="mulai">Mulai</string>
+    <string name="title_home">Home</string>
+    <string name="title_about">About</string>
+    <string name="darkmode">Dark Mode</string>
+    <string name="language_settings">Language Settings</string>
+    <string name="continue_reading">Lanjutkan Membaca</string>
+    <string name="title">Mengenal Berbagai Ras Kucing</string>
+    <string name="description">Ayo kita mengenal jenis-jenis kucing yang ada di seluruh penjuru dunia. Karena banyak dan mereka lucu-lucu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="data_title">
+        <item>Mengenal Berbagai Ras Kucing</item>
+        <item>Singa: Raja Hutan yang Perkasa!</item>
+        <item>Penyakit Kucing dan Pencegahannya</item>
+        <item>Mengapa Lumba-Lumba itu Istimewa?</item>
+        <item>Sapi Teman Peternakan yang Luar Biasa</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Ayo kita mengenal jenis-jenis kucing yang ada di seluruh penjuru dunia. Karena banyak dan mereka lucu-lucu</item>
+        <item>Singa adalah salah satu hewan yang paling terkenal di dunia. Mereka sering disebut "Raja Hutan"</item>
+        <item>Kucing dapat terkena berbagai penyakit, baik yang disebabkan oleh virus, bakteri, parasit ...</item>
+        <item>Lumba-lumba adalah mamalia, bukan ikan. Mereka bernapas dengan paru-paru ...</item>
+        <item>Sapi adalah hewan ternak yang sangat penting bagi manusia. Mereka hidup di seluruh ...</item>
+
+    </string-array>
+
+    <integer-array name="data_img">
+        <item>@drawable/article1</item>
+        <item>@drawable/article2</item>
+        <item>@drawable/article3</item>
+        <item>@drawable/article4</item>
+        <item>@drawable/article5</item>
+    </integer-array>
+
+    <integer-array name="data_color">
+        <item>@color/green</item>
+        <item>@color/dark_cream</item>
+        <item>@color/orange</item>
+        <item>@color/green</item>
+        <item>@color/cream</item>
+    </integer-array>
+
+</resources>
