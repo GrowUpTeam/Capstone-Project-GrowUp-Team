@@ -11,6 +11,9 @@
     <string name="description">Ayo kita mengenal jenis-jenis kucing yang ada di seluruh penjuru dunia. Karena banyak dan mereka lucu-lucu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_description">AnimalPedia adalah aplikasi edukatif interaktif untuk anak-anak, memberikan informasi menarik tentang berbagai jenis hewan. Belajar tentang hewan menjadi lebih menyenangkan. Jelajahi dan temukan keajaiban dunia hewan bersama AnimalPedia!</string>
+    <string name="akal">abcdefghijklmn</string>
+
 
     <string-array name="data_title">
         <item>Mengenal Berbagai Ras Kucing</item>
@@ -44,5 +47,13 @@
         <item>@color/green</item>
         <item>@color/cream</item>
     </integer-array>
+
+    <string name="wahyu">Wahyu Iskandar S.\n(CC) - C553D4KY0455</string>
+    <string name="hasan">Yusuf Hasan N.\n(CC) - C004D4KY0976</string>
+    <string name="aradea">Aradea Kharisma A. P.\n(ML) - M008D4KX1848</string>
+    <string name="ivan">Dwi Ivan F.\n(ML) - M008D4KY1849</string>
+    <string name="diah">Diah Afia Safitri\n(ML) - M010D4KX2245</string>
+    <string name="ardes">Ardes Zubka Putra\n(MD) - A011D4KY3560</string>
+    <string name="aryan">Aryan Dafi Maulana\n(MD) - A011D4KY3459</string>
 
 </resources>

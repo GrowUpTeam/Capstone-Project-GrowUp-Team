@@ -23,5 +23,19 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navView.setupWithNavController(navController)
 
+        navView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_home -> {
+                    navController.navigate(R.id.homeFragment2)
+                    true
+                }
+                R.id.navigation_about -> {
+                    navController.navigate(R.id.aboutFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 }
