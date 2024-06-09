@@ -1,16 +1,16 @@
 package com.example.animalpedia
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.animalpedia.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -37,5 +37,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Use binding to get the ImageButton reference
+        val btnScanActivity: ImageButton = binding.btnCapture
+        btnScanActivity.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.btn_capture -> {
+                val moveIntent = Intent(this@MainActivity, ScanActivity::class.java)
+                startActivity(moveIntent)
+            }
+        }
     }
 }
