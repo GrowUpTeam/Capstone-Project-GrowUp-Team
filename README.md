@@ -1,9 +1,8 @@
-![logo](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/170782865/922e5a2a-1772-4e59-8312-a8c86db8b43e)
-
-# Capstone-Project-GrowUp-Team
-
 ## Animal Pedia
-AnimalPedia is our team's initiative to create a preschool-focused educational app centered on animals. It aims to seamlessly blend learning with fun by offering detailed information about animals, their characteristics, and sounds. By adopting a user-driven design approach, AnimalPedia ensures relevance and effectiveness in supporting the creative development of preschoolers.
+<img src="https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/170782865/d3b30b5e-b700-47c9-87ea-478c2593b996" alt="Animal Pedia" width="180" height="180">
+
+## What is Animal Pedia?
+"Animal Pedia" is our team's initiative to create a preschool-focused educational app centered on animals. It aims to seamlessly blend learning with fun by offering detailed information about animals, their characteristics, and sounds. By adopting a user-driven design approach, AnimalPedia ensures relevance and effectiveness in supporting the creative development of preschoolers.
 
 ## Team Member 
 1. (ML) M010D4KX2245 – Diah Afia Safitri – University of Indonesia
