@@ -1,3 +1,5 @@
+![logo](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/170782865/922e5a2a-1772-4e59-8312-a8c86db8b43e)
+
 # Capstone-Project-GrowUp-Team
 
 ## Animal Pedia
