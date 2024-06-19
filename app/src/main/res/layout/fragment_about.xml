@@ -161,7 +161,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="70dp"
             android:src="@drawable/ardes"
             app:layout_constraintTop_toBottomOf="@id/tv_aradea"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -184,7 +184,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="70dp"
             android:src="@drawable/aryan"
             app:layout_constraintTop_toBottomOf="@id/tv_diah"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -204,13 +204,14 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="14sp"
+            android:layout_marginTop="16dp"
             android:text="@string/akal"
             android:textColor="@color/light_cream"
-            app:layout_constraintTop_toBottomOf="@id/tv_ardes"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_ardes" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

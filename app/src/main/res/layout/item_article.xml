@@ -46,6 +46,8 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:textSize="12sp"
+            android:maxLines="3"
+            android:justificationMode="inter_word"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:text="@string/description"

@@ -38,20 +38,49 @@
 
     <ImageView
         android:id="@+id/img_scanImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:src="@drawable/scan_image"
-        app:layout_constraintTop_toBottomOf="@+id/img_textScan"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/img_textScan" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_camera"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/light_green"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/img_scanImage"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginStart="40dp"
+        android:text="@string/camera"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_green"
+        app:layout_constraintEnd_toStartOf="@id/btn_gallery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_scanImage" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/gallery"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@id/img_scanImage" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="@string/upload"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/btn_camera"
+        app:layout_constraintStart_toStartOf="@id/btn_camera"
+        app:layout_constraintEnd_toEndOf="@id/btn_gallery"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

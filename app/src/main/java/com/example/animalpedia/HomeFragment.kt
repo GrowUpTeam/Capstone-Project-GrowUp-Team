@@ -1,14 +1,14 @@
 package com.example.animalpedia
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.provider.Settings
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
 
@@ -51,6 +51,14 @@ class HomeFragment : Fragment() {
         val listAdapter = ListArticleAdapter(list)
         recyclerView.adapter = listAdapter
         recyclerView.setHasFixedSize(true)
+
+        listAdapter.setOnItemClickListener(object : ListArticleAdapter.OnItemClickListener{
+            override fun onItemClick(article: Article) {
+                val intentToDetail = Intent(requireContext(), ArticleDetail::class.java)
+                intentToDetail.putExtra(ArticleDetail.ARTICLE, article)
+                startActivity(intentToDetail)
+            }
+        })
     }
 
     @SuppressLint("Recycle")

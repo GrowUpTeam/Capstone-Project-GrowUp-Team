@@ -13,6 +13,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_description">AnimalPedia adalah aplikasi edukatif interaktif untuk anak-anak, memberikan informasi menarik tentang berbagai jenis hewan. Belajar tentang hewan menjadi lebih menyenangkan. Jelajahi dan temukan keajaiban dunia hewan bersama AnimalPedia!</string>
     <string name="scan">Cari Tahu Hewan</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
     <string name="akal">abcdefghijklmn</string>
 
 
@@ -25,11 +28,11 @@
     </string-array>
 
     <string-array name="data_description">
-        <item>Ayo kita mengenal jenis-jenis kucing yang ada di seluruh penjuru dunia. Karena banyak dan mereka lucu-lucu</item>
-        <item>Singa adalah salah satu hewan yang paling terkenal di dunia. Mereka sering disebut "Raja Hutan"</item>
-        <item>Kucing dapat terkena berbagai penyakit, baik yang disebabkan oleh virus, bakteri, parasit ...</item>
-        <item>Lumba-lumba adalah mamalia, bukan ikan. Mereka bernapas dengan paru-paru ...</item>
-        <item>Sapi adalah hewan ternak yang sangat penting bagi manusia. Mereka hidup di seluruh ...</item>
+        <item>Dunia pecinta kucing dihiasi dengan berbagai ras kucing yang memikat dengan ciri khasnya masing-masing. Dari Persia yang berbulu panjang dan menggemaskan hingga Maine Coon yang berbadan besar dan gagah, ras-ras kucing ini menawarkan pesona dan keunikan tersendiri.Persia, dengan bulu panjang dan wajah datar yang menggemaskan, merupakan salah satu ras kucing paling populer. Sifat mereka yang tenang dan penyayang menjadikannya pilihan ideal bagi keluarga. Di sisi lain, Maine Coon, raksasa dunia kucing, terkenal dengan bulunya yang tebal dan panjang, serta sifatnya yang ramah dan suka bermain.Masih banyak ras kucing menarik lainnya yang patut dijelajahi, seperti Siam dengan pola warna khasnya, Sphynx yang tidak berbulu, dan Ragdoll yang terkenal dengan sifatnya yang "lembek" saat digendong. Setiap ras memiliki karakteristik dan kebutuhan uniknya sendiri, bagaimana? menarik bukan?</item>
+        <item>Di sabana Afrika, singa mendominasi sebagai "Raja Hutan" dengan kekuatan dan wibawa mereka. Jantan dengan surai lebatnya memimpin kawanan dalam berburu dan menjaga wilayah, sementara auman mereka yang menggelegar berfungsi untuk komunikasi dan intimidasi. Singa tidak hanya predator puncak tetapi juga penjaga keseimbangan ekosistem dengan memburu mangsa yang lemah dan sakit. Mereka dihormati karena keberanian dan kecerdasan mereka, menjadi simbol kekuatan di banyak budaya dan mengingatkan kita akan pentingnya pelestarian alam.</item>
+        <item>Kucing, hewan menggemaskan yang menemani hari-hari kita, ternyata juga rentan terhadap berbagai penyakit. Panleukopenia, rabies, cacingan, dan penyakit kulit adalah beberapa penyakit yang umum menyerang kucing. Pencegahan adalah kunci utama dalam menjaga kesehatan kucing. Vaksinasi, pemberian obat cacing, menjaga kebersihan, memperhatikan pola makan, dan pemeriksaan kesehatan rutin merupakan langkah-langkah penting yang dapat dilakukan.</item>
+        <item>Lumba-lumba, dengan kecerdasan dan keramahannya, selalu memukau manusia. Hewan mamalia laut ini istimewa karena beberapa alasan. Pertama, lumba-lumba memiliki otak yang kompleks, memungkinkan mereka untuk belajar, memecahkan masalah, dan bahkan menggunakan alat. Kemampuan komunikasi mereka pun luar biasa, dengan berbagai macam suara, gerakan tubuh, dan bahasa tubuh yang digunakan untuk berkomunikasi. Lumba-lumba adalah hewan luar biasa yang terus memukau dan menginspirasi manusia. Kecerdasan, sifat sosial, dan kemampuan komunikasinya yang unik menjadikan mereka salah satu makhluk paling istimewa di planet ini. Kita harus terus belajar tentang lumba-lumba dan melindungi mereka dari bahaya.</item>
+        <item>Sapi adalah hewan ternak yang sangat penting, menjadi sumber protein hewani utama melalui daging dan susu yang kaya nutrisi. Selain itu, sapi juga memberikan manfaat lain seperti kulit untuk bahan baku industri fashion dan kotoran sebagai pupuk organik. Dalam ekonomi, peternakan sapi mendukung mata pencaharian di daerah pedesaan, menyediakan lapangan pekerjaan dan menjadi sumber pendapatan bagi peternak. Sapi juga memiliki nilai budaya yang mendalam di berbagai negara, seperti di India dimana sapi dianggap suci. Kesimpulannya, sapi memberikan kontribusi besar dalam aspek pangan, ekonomi, dan budaya. Mendukung peternakan sapi yang berkelanjutan adalah tanggung jawab bersama untuk menjaga kelestarian manfaatnya bagi kehidupan manusia.</item>
 
     </string-array>
 
