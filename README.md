@@ -18,8 +18,11 @@ Animal Pedia is a mobile application for early childhood (PAUD) that seamlessly 
 
 ## Project Installation
 1. Clone the repository
-   git clone https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team.git
-   git checkout Mobile-Dev
-2. Open with Android Studio
-3. Wait until the gradle synchronize done
-4. Run it in your "Android Studio Emulator" or "Android Phone"
+    ```
+    git clone https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team.git
+2. Open the folder, git bash and type this script
+    ```
+    git checkout Mobile-Dev
+3. Open with Android Studio
+4. Wait until the gradle synchronize done
+5. Run it in your "Android Studio Emulator" or "Android Phone"
