@@ -24,6 +24,8 @@ The AnimalPedia Model uses transfer learning with TensorFlow to classify 90 anim
 ---
 In this Dataset, we have 5400 Animal Images in 90 different categories or classes. And this is the list of animals :
 
+| Nama Hewan     | Nama Hewan     | Nama Hewan     | Nama Hewan     |
+| -------------- | -------------- | -------------- | -------------- |
 | Antelope       | Badger         | Bat            | Bear           |
 | Bee            | Beetle         | Bison          | Boar           |
 | Butterfly      | Cat            | Caterpillar    | Chimpanzee     |
@@ -46,7 +48,7 @@ In this Dataset, we have 5400 Animal Images in 90 different categories or classe
 | Snake          | Sparrow        | Squid          | Squirrel       |
 | Starfish       | Swan           | Tiger          | Turkey         |
 | Turtle         | Whale          | Wolf           | Wombat         |
-| Woodpecker     | Zebra          |                |                |
+| Woodpecker     | Zebra          |                |   
 
 ## Author
 ---
