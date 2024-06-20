@@ -22,3 +22,30 @@ The function of this API is to send prediction results from user uploads which a
   - middleware for Express which is useful for uploading image, video or document files uploaded in web applications.
 - `"mysql2": "^3.9.9"`
   -   MySQL2 is a MySQL client library for Node.js that uses the concept of promises to manage connections and query execution with efficiency.
+ 
+# Use API
+First, install npm with npm install, after that you can adjust it to the database like DB_HOST=localhost
+ DB_USER=root
+ DB_PASSWORD=
+ DB_NAME=animal_name
+ PORT=3306
+ MODEL_URL=https://storage.googleapis.com/json-new-ivan/model-in-prod/model.json
+  then add routes such as /get-data to get an API that suits its purpose after URL
+
+- Result
+  - URL
+      - `/get-data`
+  - METHOD
+      - POST
+  - RESPONSE
+      ```{
+      error: false,
+      message: 'Animal get successful',
+      confidenceScore: (score Predict),
+      label: id,
+      AnimalResult: {Id: hewan[0].id,
+        nama: (nama_hewan),
+        linkFoto: (link from bucket),
+        linkFoto2: (link from bucket),
+        penjelasan: (explain)
+     } 
