@@ -1,5 +1,15 @@
 # Backend API
-The function of this API is to send prediction results from user uploads which are sent to the APP engine and after that they will be processed by the Backend which accesses the model in the Cloud Storage Bucket. After that, the results are compared with the database. However, the Database cannot save the image and it ends up being retrieved from the new Cloud Storage Bucket. After matching, the Database results will be sent to the APP engine again and then, the final results will be sent back from the APP engine to the user again with the Results from the Database.
+## Reference
+https://www.dicoding.com/academies/658/
+- The function of this API is to send prediction results from user uploads which are sent to the APP engine and after that they will be processed by the Backend which accesses the model in the Cloud Storage Bucket. After that, the results are compared with the database. However, the Database cannot save the image and it ends up being retrieved from the new Cloud Storage Bucket. After matching, the Database results will be sent to the APP engine again and then, the final results will be sent back from the APP engine to the user again with the Results from the Database.
+
+### Tech Used
+- NodeJS
+- Express
+- TenserflowJS
+- MySQL
+- 
+### Packages used by the backend
 - `"@google-cloud/storage": "^7.11.1"`
   - This package provides Node.js to interact with the Google Cloud Storage storage service. this package, developers can manage buckets and objects in Google Cloud Storage, such as uploading, downloading, deleting and managing objects.
 - `"@tensorflow/tfjs": "^4.20.0"` `"@tensorflow/tfjs-node": "^4.20.0"`
