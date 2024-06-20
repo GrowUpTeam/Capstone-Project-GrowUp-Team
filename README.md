@@ -1,5 +1,5 @@
 ## Animal Pedia Mobile App
-...
+Animal Pedia is a mobile application for early childhood (PAUD) that seamlessly integrates technology into learning from a young age. This app will not only aid children but also assist parents and teachers in explaining concepts effectively to their children/students. 
 
 ## Contributor
 1. (MD) A011D4KY3459 – Aryan Dafi Maulana – Padjadjaran University
@@ -16,8 +16,10 @@
   - Data
 - Retrofit
 
-## RestAPI
-...
-
 ## Project Installation
-...
+1. Clone the repository
+   git clone https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team.git
+   git checkout Mobile-Dev
+2. Open with Android Studio
+3. Wait until the gradle synchronize done
+4. Run it in your "Android Studio Emulator" or "Android Phone"
