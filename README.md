@@ -1,44 +1,23 @@
-## modelController.js 
-- Terdapat fungsi untuk mengambil hasil seperti hasil prediksi dengan 
-``` const { confidenceScore, label, id } = await predictClassification(model, file.buffer);```. Terdapat pada predictClassification pada ```services/inferenceService.js```
-- Pengambilan data pada ```const [hewan] = await db.execute('SELECT * FROM hewan WHERE id = ?', [id]);``` dari database
-- Setelah pengambilan dari database berhasil maka respon yang dikirim hewan yang ditemukan disesuikan dengan apa yang ada dalah database seperti
-  - id
-  - nama
-  - linkfoto
-  - linkFoto2
-  - penjelasan
-- Terakhir jika eror akan keluar ```} catch (err) {
-    // Tangani kesalahan jika terjadi
-    console.error('Error during get animal:', err);
-    res.status(500).send({ error: true, message: 'Server error' });
-  }```
-
-## modelController.js
-- ```multer``` untuk menangani upload sebuah file.
- 
-## modelMiddleware.js
-- Pada `fileFilter` ada beberapa file yang hanya diterima seperti `/jpeg|jpg|png|gif|bmp/`
-- `upload.single('image')` menandakan bahwa middleware ini hanya menangani satu file dengan format yang sudah ditentukan.
-- 
- 
-  ## auth.js
-  - ```router.post``` untuk endpoint sebuah rute
-  - ```get-data``` untuk endpoint setelah api untuk deploy
-  -  ```modelMiddleware```  Middleware untuk memproses model. Middleware ini akan dieksekusi sebelum handler 
-  -   ``modelController.hewan``  Handler untuk mengambil data hewan
-
-  ## inferenceService.js
-  - pada ``` tensor = tf.node.decodeImage(imageBuffer, 3) ``` di try berguna untuk mengubah buffer gambar menjadi tensor tensor flow. Jika berhasil gambar akan diubah ukuran ukuran menjadi 240 x 240 dengan `.resizeNearestNeighbor([240, 240])` setelahnya akan di expand dimensi dengan `.expandDims()`
-  - Setelah itu, nilai-nilai dalam tensor dikonversi ke float menggunakan .toFloat() dan dinormalisasi dengan membaginya dengan skalar 255.0 menggunakan `.div(tf.scalar(255.0))`.
-  - `const prediction = model.predict(tensor);` memakai model yang diberikan untuk diprediksi dengan tensor yang diberi pada proses sebelumnya
-  - Setelahnya akan ada hasil prediksi `score` dan akan dikembalikan skor.
-  - Di definisikan class yang tersedia, pada dataset terdapat 90 class dan harus sama persis nama dengan outputnya.
-  - Untuk ` if (label === 'antelope') {
-        id = 1;}`
-    - `label` disesuaikan dengan nama hewan yang ada. Serta `id` untuk dicocokan dengan id database pada database `nama_hewan`
- 
-  ## loadModel.js
-  - Pada model dari Machine Learning menggunakan Graph tidak menggunakan Layer yang didapatkan dari Machine Learning.
-
-    ## 
+# Backend API
+The function of this API is to send prediction results from user uploads which are sent to the APP engine and after that they will be processed by the Backend which accesses the model in the Cloud Storage Bucket. After that, the results are compared with the database. However, the Database cannot save the image and it ends up being retrieved from the new Cloud Storage Bucket. After matching, the Database results will be sent to the APP engine again and then, the final results will be sent back from the APP engine to the user again with the Results from the Database.
+- `"@google-cloud/storage": "^7.11.1"`
+  - This package provides Node.js to interact with the Google Cloud Storage storage service. this package, developers can manage buckets and objects in Google Cloud Storage, such as uploading, downloading, deleting and managing objects.
+- `"@tensorflow/tfjs": "^4.20.0"` `"@tensorflow/tfjs-node": "^4.20.0"`
+  - Machine learning libraries in JavaScript. This package is used to build and train models provided by machine learning
+- `"axios": "^1.7.2"`,
+  - HTTP client library for Node.js and browsers that offers a simple and easy-to-use interface for making HTTP requests to the server. Retrieves data from external APIs, sends POST requests with JSON data, and handles responses from the server. 
+- `"dotenv": "^16.4.5"`,
+  - Pada file `.env` ini membantu menyimpan konvigurasi aplikasi, database dan API untuk model JSON
+    ```DB_HOST=localhost
+        DB_USER=root
+        DB_PASSWORD=
+        DB_NAME=nama_hewan
+        PORT=3306
+        MODEL_URL=https://storage.googleapis.com/json-new-ivan/model-in-prod/model.json
+- `"express": "^4.19.2"`
+  - minimalist web for Node.js that provides various features to easily build web applications and RESTful APIs. This simplifies the handling of routes, HTTP requests, and server responses
+- `"express-validator": "^7.1.0"`
+  - This middleware enables data input validation of HTTP requests in Express applications. Helps in checking, cleaning and validating data before processing it further.
+- `"multer": "^1.4.5-lts.1"`
+  - middleware for Express which is useful for uploading image, video or document files uploaded in web applications.
+- `"mysql2": "^3.9.9"`
