@@ -21,3 +21,4 @@ The function of this API is to send prediction results from user uploads which a
 - `"multer": "^1.4.5-lts.1"`
   - middleware for Express which is useful for uploading image, video or document files uploaded in web applications.
 - `"mysql2": "^3.9.9"`
+  -   MySQL2 is a MySQL client library for Node.js that uses the concept of promises to manage connections and query execution with efficiency.
