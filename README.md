@@ -17,33 +17,26 @@ The AnimalPedia Model uses transfer learning with TensorFlow to classify 90 anim
 2. Paper for Pretrained Model
 
 ## About Dataset
-In this Dataset, we have 5400 Animal Images in 90 different categories or classes. And this is the list of animals :
+In this Dataset, we have 5400 Animal Images in 90 different categories or classes. The following table lists all the animal classes included in the dataset:
 
-| Nama Hewan     | Nama Hewan     | Nama Hewan     | Nama Hewan     |
-| -------------- | -------------- | -------------- | -------------- |
-| Antelope       | Badger         | Bat            | Bear           |
-| Bee            | Beetle         | Bison          | Boar           |
-| Butterfly      | Cat            | Caterpillar    | Chimpanzee     |
-| Cockroach      | Cow            | Coyote         | Crab           |
-| Crow           | Deer           | Dog            | Dolphin        |
-| Donkey         | Dragonfly      | Duck           | Eagle          |
-| Elephant       | Flamingo       | Fly            | Fox            |
-| Goat           | Goldfish       | Goose          | Gorilla        |
-| Grasshopper    | Hamster        | Hare           | Hedgehog       |
-| Hippopotamus   | Hornbill       | Horse          | Hummingbird    |
-| Hyena          | Jellyfish      | Kangaroo       | Koala          |
-| Ladybugs       | Leopard        | Lion           | Lizard         |
-| Lobster        | Mosquito       | Moth           | Mouse          |
-| Octopus        | Okapi          | Orangutan      | Otter          |
-| Owl            | Ox             | Oyster         | Panda          |
-| Parrot         | Pelecaniformes | Penguin        | Pig            |
-| Pigeon         | Porcupine      | Possum         | Raccoon        |
-| Rat            | Reindeer       | Rhinoceros     | Sandpiper      |
-| Seahorse       | Seal           | Shark          | Sheep          |
-| Snake          | Sparrow        | Squid          | Squirrel       |
-| Starfish       | Swan           | Tiger          | Turkey         |
-| Turtle         | Whale          | Wolf           | Wombat         |
-| Woodpecker     | Zebra          |                |   
+| Animal Name    | Animal Name    | Animal Name    | Animal Name    | Animal Name    | Animal Name    |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Antelope       | Badger         | Bat            | Bear           | Bee            | Beetle         |
+| Bison          | Boar           | Butterfly      | Cat            | Caterpillar    | Chimpanzee     |
+| Cockroach      | Cow            | Coyote         | Crab           | Crow           | Deer           |
+| Dog            | Dolphin        | Donkey         | Dragonfly      | Duck           | Eagle          |
+| Elephant       | Flamingo       | Fly            | Fox            | Goat           | Goldfish       |
+| Goose          | Gorilla        | Grasshopper    | Hamster        | Hare           | Hedgehog       |
+| Hippopotamus   | Hornbill       | Horse          | Hummingbird    | Hyena          | Jellyfish      |
+| Kangaroo       | Koala          | Ladybugs       | Leopard        | Lion           | Lizard         |
+| Lobster        | Mosquito       | Moth           | Mouse          | Octopus        | Okapi          |
+| Orangutan      | Otter          | Owl            | Ox             | Oyster         | Panda          |
+| Parrot         | Pelecaniformes | Penguin        | Pig            | Pigeon         | Porcupine      |
+| Possum         | Raccoon        | Rat            | Reindeer       | Rhinoceros     | Sandpiper      |
+| Seahorse       | Seal           | Shark          | Sheep          | Snake          | Sparrow        |
+| Squid          | Squirrel       | Starfish       | Swan           | Tiger          | Turkey         |
+| Turtle         | Whale          | Wolf           | Wombat         | Woodpecker     | Zebra          |
+
 
 ## Author
 This project is developed by C241-PS270 Bangkit Team Product Capstone
