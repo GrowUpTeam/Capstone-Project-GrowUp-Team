@@ -1,20 +1,22 @@
 package com.example.animalpedia
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.content.pm.PackageManager
-import android.Manifest
+import android.util.Log
 
 class ScanActivity : AppCompatActivity() {
     private val REQUEST_IMAGE_CAPTURE = 1
@@ -22,6 +24,8 @@ class ScanActivity : AppCompatActivity() {
     private val CAMERA_PERMISSION_CODE = 100
 
     private lateinit var imgScanImage: ImageView
+    private lateinit var tfliteHelper: TFLiteHelper
+    private var selectedBitmap: Bitmap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,14 +38,13 @@ class ScanActivity : AppCompatActivity() {
         }
 
         imgScanImage = findViewById(R.id.img_scanImage)
+        tfliteHelper = TFLiteHelper(this)
 
         val btnCamera: Button = findViewById(R.id.btn_camera)
         btnCamera.setOnClickListener {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                // Permission is already granted
                 openCamera()
             } else {
-                // Request Camera Permission
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
             }
         }
@@ -49,6 +52,13 @@ class ScanActivity : AppCompatActivity() {
         val btnGallery: Button = findViewById(R.id.btn_gallery)
         btnGallery.setOnClickListener {
             openGallery()
+        }
+
+        val btnProcess: Button = findViewById(R.id.btn_process)
+        btnProcess.setOnClickListener {
+            selectedBitmap?.let {
+                processImage(it)
+            } ?: Toast.makeText(this, "Please select an image first", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -70,11 +80,9 @@ class ScanActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == CAMERA_PERMISSION_CODE) {
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                // Permission granted
                 openCamera()
             } else {
-                // Permission denied
-                // Handle the case where the user denied the permission
+                Toast.makeText(this, "Camera permission is required to use the camera", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -85,13 +93,37 @@ class ScanActivity : AppCompatActivity() {
             when (requestCode) {
                 REQUEST_IMAGE_CAPTURE -> {
                     val imageBitmap = data?.extras?.get("data") as? Bitmap
-                    imgScanImage.setImageBitmap(imageBitmap)
+                    if (imageBitmap != null) {
+                        Log.d("ScanActivity", "Captured image size: Width = ${imageBitmap.width}, Height = ${imageBitmap.height}")
+                        imgScanImage.setImageBitmap(imageBitmap)
+                        selectedBitmap = imageBitmap
+                    } else {
+                        Toast.makeText(this, "Failed to capture image", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 REQUEST_IMAGE_PICK -> {
                     val selectedImageUri: Uri? = data?.data
-                    imgScanImage.setImageURI(selectedImageUri)
+                    if (selectedImageUri != null) {
+                        val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImageUri)
+                        Log.d("ScanActivity", "Selected image size: Width = ${bitmap.width}, Height = ${bitmap.height}")
+                        imgScanImage.setImageURI(selectedImageUri)
+                        selectedBitmap = bitmap
+                    } else {
+                        Toast.makeText(this, "Failed to select image", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
+        }
+    }
+
+    private fun processImage(bitmap: Bitmap) {
+        try {
+            val (label, probability) = tfliteHelper.classifyImage(bitmap)
+            Toast.makeText(this, "Predicted class: $label with confidence $probability", Toast.LENGTH_SHORT).show()
+            Log.d("ScanActivity", "Predicted class: $label with confidence $probability")
+        } catch (e: Exception) {
+            Toast.makeText(this, "Failed to process image: ${e.message}", Toast.LENGTH_SHORT).show()
+            Log.e("ScanActivity", "Error processing image", e)
         }
     }
 }

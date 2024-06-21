@@ -76,10 +76,11 @@
         app:layout_constraintTop_toBottomOf="@id/img_scanImage" />
 
     <Button
+        android:id="@+id/btn_process"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
-        android:text="@string/upload"
+        android:text="@string/process"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/btn_camera"
         app:layout_constraintStart_toStartOf="@id/btn_camera"
