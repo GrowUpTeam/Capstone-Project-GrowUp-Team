@@ -2,9 +2,6 @@
 ### Target URL
 https://capstone-cc.et.r.appspot.com/
 
-### Reference
-https://www.dicoding.com/academies/658/
-
 The function of this API is to send prediction results from user upload which are sent to the APP engine and after that they will be processed by the Backend which accesses the model in the Cloud Storage Bucket. After that, the results are compared with the database. However, the Database cannot save the image and it ends up being retrieved from the new Cloud Storage Bucket. After matching, the Database results will be sent to the APP engine again and then, the final results will be sent back from the APP engine to the user again with the Results from the Database.
 
 ### Tech Used
@@ -62,4 +59,19 @@ First, install npm with npm install, after that you can adjust it to the databas
         linkFoto: (link from bucket),
         linkFoto2: (link from bucket),
         penjelasan: (explain)
-     } 
+     }
+
+  # Documentation
+  - Bukcet for Model
+    - https://storage.googleapis.com/json-new-ivan/model-in-prod/model.json
+      
+    ![image](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/114125438/7a4c28a5-0626-436b-ba88-72a74c7e00ac)
+
+
+  - Bukcet for Dataset
+    - https://storage.googleapis.com/dataset-teamgrowup/animals2/new/(nama_hewan)/(1 - 5).jpg
+    - URL :boar-babihutan/1.jpg (https://storage.googleapis.com/dataset-teamgrowup/animals2/new/boar-babihutan/1.jpg)
+      
+    ![image](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/114125438/cb7a320b-6a41-419f-a694-a081cf1272b7)
+
+
