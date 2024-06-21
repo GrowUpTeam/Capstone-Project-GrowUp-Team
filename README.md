@@ -63,14 +63,15 @@ First, install npm with npm install, after that you can adjust it to the databas
 
   # Documentation
   - Bukcet for Model
-    - https://storage.googleapis.com/json-new-ivan/model-in-prod/model.json
+    - [Link Model](https://storage.googleapis.com/json-new-ivan/model-in-prod/model.json)
       
     ![image](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/114125438/7a4c28a5-0626-436b-ba88-72a74c7e00ac)
 
 
   - Bukcet for Dataset
     - https://storage.googleapis.com/dataset-teamgrowup/animals2/new/(nama_hewan)/(1 - 5).jpg
-    - URL :boar-babihutan/1.jpg (https://storage.googleapis.com/dataset-teamgrowup/animals2/new/boar-babihutan/1.jpg)
+    - URL :boar-babihutan/1.jpg
+    - Example URL: (https://storage.googleapis.com/dataset-teamgrowup/animals2/new/boar-babihutan/1.jpg)
       
     ![image](https://github.com/GrowUpTeam/Capstone-Project-GrowUp-Team/assets/114125438/cb7a320b-6a41-419f-a694-a081cf1272b7)
 
